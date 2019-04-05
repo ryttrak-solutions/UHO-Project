@@ -2,7 +2,7 @@ import React from 'react';
 
 import logo from '../../assets/who-logo.png';
 
-export default function leftPanel() {
+export default function leftPanel(props) {
   return (
     <div className="leftPanel">
 			<div className="logoImg">
@@ -21,13 +21,21 @@ export default function leftPanel() {
 				</p>
 			</div>
 
-			<div className="tickMark">
-				{/* <i class="fas fa-check"></i> */}
-			</div>
+			{props.screen === "game" ? (
+				<div className="tickMark">
+					{/* <i class="fas fa-check"></i> */}
+				</div>
+			) : (
+				<div></div>
+			)}
 
-			<div className="timerDiv">
-				01:09
-			</div>
+			{props.screen === "game" ? (
+				<div className="timerDiv">
+					01:09
+				</div>
+			) : (
+				<div></div>
+			)}
     </div>
   )
 }

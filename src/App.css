@@ -58,6 +58,7 @@
 .rightPanel {
     background-color: #F5F6F7;
     border-radius: 10px;
+    height: 95vh;
 }
 
 .selectedPuzzle {
@@ -75,4 +76,53 @@
 
 .otherPuzzle img {
     border-radius: 15px;
+}
+
+.winRightPanel {
+    background-color: #008DC9;
+    border-radius: 10px;
+    position: relative;
+    padding: 0px;
+    height: 95vh;
+}
+
+.winMessage {
+    color: white;
+    text-align: center;
+    margin: 20% auto 0 auto;
+    font-size: 3em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.winTickMark {
+    width: 250px;
+    height: 80px;
+    background-color: #87C569;
+    border-radius: 40px;
+    margin: 10px auto;
+}
+
+.bottomButton {
+    background-color: #007699;
+    color: white;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 600;
+    padding-top: 25px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    height: 110px;
+    border-radius: 0 0 10px 10px;
+    left: 0px;
+}
+
+.winScore {
+    text-align: center;
+    font-size: 5em;
+    color: #87C569;
+    font-weight: 700;
+    margin-top: -15px;
 }
