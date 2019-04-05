@@ -9,7 +9,8 @@ export default class puzzlePixel extends Component {
       pixelWidth: this.props.gridWidthPx / this.props.gridWidth,
       pixelHeight: this.props.gridHeightPx / this.props.gridHeight,
       positionX: (this.props.index) % this.props.gridWidth,
-      positionY: Math.floor((this.props.index) / this.props.gridWidth)
+      positionY: Math.floor((this.props.index) / this.props.gridWidth),
+      isEmpty: this.props.index === this.props.gridWidth*this.props.gridHeight-1
     }
   }
 
@@ -20,7 +21,7 @@ export default class puzzlePixel extends Component {
         height: `${this.state.pixelHeight}px`,
         left: `${((this.props.position) % this.props.gridWidth) * this.state.pixelWidth}px`,
         top: `${(Math.floor((this.props.position) / this.props.gridWidth)) * this.state.pixelHeight}px`,
-        backgroundImage: `url(${this.props.image})`,
+        backgroundImage: this.state.isEmpty ? "" : `url(${this.props.image})`,
         backgroundSize: `${this.props.gridWidthPx}px ${this.props.gridHeightPx}px`,
         backgroundPosition: `-${this.state.positionX * this.state.pixelWidth}px -${this.state.positionY * this.state.pixelHeight}px`
       }} onClick={(e) => {
