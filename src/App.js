@@ -1,16 +1,16 @@
 // imports
 import React, { Component } from 'react';
 import './App.css';
+import 'bulma/css/bulma.css';
 
 // components
-import PuzzleGrid from './components/puzzleGrid/puzzleGrid';
+import PuzzleParent from './components/puzzleParent/puzzleParent';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        Hello
-        <PuzzleGrid />
+        <PuzzleParent />
       </div>
     );
   }
